@@ -1,4 +1,4 @@
-package com.example.kelseyde.olympicgames;
+package com.example.kelseyde.olympicgames.Events;
 
 
 public interface Playable {

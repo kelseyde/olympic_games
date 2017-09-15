@@ -14,9 +14,9 @@ public class TeamTest {
 
     @Before
     public void before() {
-        mo = new Athlete("Mo", UK, SPRINT, 10);
-        usain = new Athlete("Usain Bolt", JAMAICA, SPRINT, 10);
-        uk = new Team("UK Men's Sprint Team", UK, SPRINT);
+        mo = new Athlete("Mo", UK, RELAY, 10);
+        usain = new Athlete("Usain Bolt", JAMAICA, RELAY, 10);
+        uk = new Team("UK Men's Sprint Team", UK, RELAY);
         uk.getAthletes().add(mo);
     }
 
@@ -44,13 +44,13 @@ public class TeamTest {
 
     @Test
     public void testGetSport() {
-        assertEquals(SPRINT, uk.getSport());
+        assertEquals(RELAY, uk.getSport());
     }
 
     @Test
     public void testSetSport() {
-        uk.setSport(MARATHON);
-        assertEquals(MARATHON, uk.getSport());
+        uk.setSport(SWIMMING);
+        assertEquals(SWIMMING, uk.getSport());
     }
 
     @Test

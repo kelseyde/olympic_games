@@ -17,7 +17,7 @@ public class AthleteTest {
 
     @Before
     public void before() {
-        athlete1 = new Athlete("Mo Farah", UK, SPRINT, 10);
+        athlete1 = new Athlete("Mo Farah", UK, RELAY, 10);
     }
 
     @Test
