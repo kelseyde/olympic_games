@@ -21,9 +21,13 @@ public class Athlete extends Competitor {
 
     //methods
 
+//    public int compete() {
+//        int result = getResultGenerator().generate(getSkill());
+//        return result;
+//    }
+
     public int compete() {
-        int result = getResultGenerator().generate(getSkill());
-        return result;
+        return skill;
     }
 
 }

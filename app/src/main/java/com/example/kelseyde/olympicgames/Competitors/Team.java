@@ -45,9 +45,13 @@ public class Team extends Competitor {
         }
     }
 
+//    public int compete() {
+//        int result = getResultGenerator().generate(getTeamSkill());
+//        return result;
+//    }
+
     public int compete() {
-        int result = getResultGenerator().generate(getTeamSkill());
-        return result;
+        return getTeamSkill();
     }
 
 }

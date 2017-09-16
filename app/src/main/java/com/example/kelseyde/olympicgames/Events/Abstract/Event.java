@@ -1,4 +1,4 @@
-package com.example.kelseyde.olympicgames.Events;
+package com.example.kelseyde.olympicgames.Events.Abstract;
 import com.example.kelseyde.olympicgames.Competitors.*;
 import com.example.kelseyde.olympicgames.Medals.*;
 
@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public abstract class Event implements Playable {
 
-    protected String title;
-    protected Sport sport;
-    protected ArrayList<Competitor> competitors;
-    protected ArrayList<Medal> medals;
+    private String title;
+    private Sport sport;
+    private ArrayList<Competitor> competitors;
+    private ArrayList<Medal> medals;
 
     public Event(String title) {
         this.title = title;
@@ -49,6 +49,10 @@ public abstract class Event implements Playable {
 
     public void setMedals(ArrayList<Medal> medals) {
         this.medals = medals;
+    }
+
+    public void addCompetitor(Competitor competitor) {
+        competitors.add(competitor);
     }
 
 }
