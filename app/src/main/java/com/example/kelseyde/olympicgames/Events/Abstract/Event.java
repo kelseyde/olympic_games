@@ -9,12 +9,10 @@ public abstract class Event implements Playable {
     private String title;
     private Sport sport;
     private ArrayList<Competitor> competitors;
-    private ArrayList<Medal> medals;
 
     public Event(String title) {
         this.title = title;
         this.competitors = new ArrayList<>();
-        this.medals = new ArrayList<Medal>();
     }
 
     //getters and setters
@@ -41,14 +39,6 @@ public abstract class Event implements Playable {
 
     public void setCompetitors(ArrayList<Competitor> competitors) {
         this.competitors = competitors;
-    }
-
-    public ArrayList<Medal> getMedals() {
-        return medals;
-    }
-
-    public void setMedals(ArrayList<Medal> medals) {
-        this.medals = medals;
     }
 
     public void addCompetitor(Competitor competitor) {

@@ -4,10 +4,6 @@ import java.util.ArrayList;
 
 public interface Playable {
 
-    void prepareMedals();
-
-    void awardMedals();
-
     ArrayList<Competitor> play();
 
 }

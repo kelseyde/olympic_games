@@ -1,4 +1,4 @@
-package com.example.kelseyde.olympicgames;
+package com.example.kelseyde.olympicgames.Events;
 import com.example.kelseyde.olympicgames.Competitors.Athlete;
 import com.example.kelseyde.olympicgames.Competitors.*;
 import com.example.kelseyde.olympicgames.Events.*;
@@ -248,16 +248,13 @@ public class FootballEventTest {
     @Test
     public void testPlayBrazilWinsSilver() {
         ArrayList<Competitor> medalWinners = e1.play();
-        for (Competitor team : medalWinners) {
-            System.out.println(team.getNationality().toString());
-        }
-        assertEquals(Nationality.BRAZIL, medalWinners.get(0).getNationality());
+        assertEquals(Nationality.BRAZIL, medalWinners.get(1).getNationality());
     }
 
     @Test
-    public void testPlayFranceWinsBronze() {
+    public void testPlayUKWinsBronze() {
         ArrayList<Competitor> medalWinners = e1.play();
-        assertEquals(Nationality.FRANCE, medalWinners.get(0).getNationality());
+        assertEquals(Nationality.UK, medalWinners.get(2).getNationality());
     }
 
 }

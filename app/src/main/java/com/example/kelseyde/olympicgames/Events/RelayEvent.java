@@ -16,10 +16,38 @@ public class RelayEvent extends TeamEvent {
         setNumberOfTeams(8);
     }
 
+    public ArrayList<Competitor> play(){
+
+        //setup medalists and scores
+        ArrayList<Competitor> medalWinners = new ArrayList<>();
+        int firstPlaceScore = 0;
+        Competitor firstPlace = null;
+        int secondPlaceScore = 0;
+        Competitor secondPlace = null;
+        int thirdPlaceScore = 0;
+        Competitor thirdPlace = null;
+
+        //play race
+        for (Competitor athlete : getCompetitors()) {
+            int result = athlete.compete();
+            if (result > firstPlaceScore) {
+                firstPlaceScore = result;
+                firstPlace = athlete;
+            } else if (result > secondPlaceScore) {
+                secondPlaceScore = result;
+                secondPlace = athlete;
+            } else if (result > thirdPlaceScore) {
+                thirdPlaceScore = result;
+                thirdPlace = athlete;
+            }
+        }
+        medalWinners.add(firstPlace);
+        medalWinners.add(secondPlace);
+        medalWinners.add(thirdPlace);
+        return medalWinners;
+    }
+
     public void prepareMedals(){}
     public void awardMedals(){}
-    public ArrayList<Competitor> play(){
-        return new ArrayList<Competitor>();
-    }
 
 }

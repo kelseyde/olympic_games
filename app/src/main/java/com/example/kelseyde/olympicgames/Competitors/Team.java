@@ -31,10 +31,6 @@ public class Team extends Competitor {
         return totalSkill;
     }
 
-    public void setTeamSkill(int teamSkill) {
-        this.teamSkill = teamSkill;
-    }
-
     //methods
 
     public void addAthlete(Athlete athlete) {
